@@ -65,7 +65,7 @@ model_name = f'lstm_{model_id}.keras'
 model = load_model(model_name)
 word_tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
-
+#must be matching with trainer
 max_word_length = 11
 
 while True:
@@ -80,6 +80,7 @@ while True:
         inputs = word_tokenizer.encode_plus(user_input, add_special_tokens = True, return_tensors = 'pt')
         return inputs
 
+    #sends to model
     def get_prediction(user_input):
         #model.eval()
         with torch.no_grad():
