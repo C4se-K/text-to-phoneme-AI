@@ -47,6 +47,7 @@ def read_file(batch_size=-1):
             count += 1
     return words, phoneme_lists, count
 
+#converts/maps the decoded output of the model to the phonmes
 def decode_output(input):
     result = []
 
