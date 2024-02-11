@@ -26,6 +26,7 @@ SYMBOLS = ['', 'AA', 'AA0', 'AA1', 'AA2', 'AE', 'AE0', 'AE1', 'AE2', 'AH', 'AH0'
            'OW1', 'OW2', 'OY', 'OY0', 'OY1', 'OY2', 'P', 'R', 'S', 'SH', 'T', 'TH', 'UH', 
            'UH0', 'UH1', 'UH2', 'UW', 'UW0', 'UW1', 'UW2', 'V', 'W', 'Y', 'Z', 'ZH']
 
+#unused for the decoding process. used only when tokenizer is not found.
 def read_file(batch_size=-1):
     words = []
     phoneme_lists = []
