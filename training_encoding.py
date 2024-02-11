@@ -90,6 +90,17 @@ def preprocess_data(words, phoneme_lists, max_word_length, max_phoneme_length, b
 
     return word_sequences_padded, phoneme_sequences_padded, bert_tokenizer, phoneme_tokenizer
 
+"""
+model architecture:
+
+sequential models are linear models where layers are stacked on top of each other.
+
+bidirectional -> layer that allows for the capturing of long term relationships
+dropout -> prevents overfitting by randomly setting n% of values to zero
+dense -> outputs the prediction, uses softmax to match the dimentions of the phonemes
+compile -> configures the model for training
+
+"""
 def build_lstm_model(vocab_size, phoneme_vocab_size, max_word_length, embedding_dim=128):
     model = Sequential()
     model.add(Embedding(input_dim=vocab_size, output_dim=embedding_dim, input_length=max_word_length))
