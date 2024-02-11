@@ -67,6 +67,11 @@ def read_file(batch_size=-1):
             count += 1
     return words, phoneme_lists, count
 
+"""
+preprocess the data
+
+tokenization of vocabulary & tokenization of phonemes
+"""
 def preprocess_data(words, phoneme_lists, max_word_length, max_phoneme_length, bert_model_name='bert-base-uncased'):
     # initialize tokenier
     bert_tokenizer = BertTokenizer.from_pretrained(bert_model_name)
