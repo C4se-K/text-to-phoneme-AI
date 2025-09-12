@@ -14,10 +14,11 @@ A custom-trained LSTM-based AI model for converting English words into their ARP
 - keras==2.13.1 (depricated)
 - transformers
 - `tokenizers`
-- `zipfile`
 
-Install dependencies:
-pip install torch tokenizers
+```markdown
+pip install -r requirements.txt
+```
+
 ## Setup
 1. Clone the repository:
 git clone https://github.com/C4se-K/text-to-phoneme-AI.git
