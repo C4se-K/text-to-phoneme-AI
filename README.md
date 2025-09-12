@@ -47,7 +47,7 @@ run `testing_decoding.py`.
 
 ## Example
 Input: `python`  
-Output: `P AY0 TH AH0 N`
+Output: `P AY TH AH N`
 
 ## Contributing
 1. Fork the repo.
