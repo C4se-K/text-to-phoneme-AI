@@ -45,11 +45,6 @@ run `testing_decoding.py`.
 - expected output: Phoneme sequence like `HH AH0 L OW1`.
 - the script handles tokenization, LSTM forward pass, and decoding to ARPABET.
 
-### Quick Test
-Run the basic test:
-python test3.py
-This may validate setup or run a simple end-to-end example.
-
 ## Example
 Input: `python`  
 Output: `P AY0 TH AH0 N`
