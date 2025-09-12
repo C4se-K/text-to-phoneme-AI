@@ -19,7 +19,9 @@ A custom-trained LSTM-based AI model for converting English words into their ARP
 
 ## Requirements
 - Python 3.8+
-- PyTorch
+- PyTorch==2.13.0 (no longer supported)
+- keras==2.13.1 (depricated)
+- transformers
 - `tokenizers`
 - `zipfile`
 
