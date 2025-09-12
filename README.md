@@ -35,15 +35,13 @@ cd text-to-phoneme-AI
 ```markdown
 unzip American-English.zip
 ```
-This should yield a file like `American-English.txt` or similar with word-to-phoneme mappings.
 
 ## Training
-The model appears pre-trained, but if retraining is needed:
 1. Run the encoding script to prepare data:
+```markdown
 python training_encoding.py
-This likely loads the dataset, tokenizes words and phonemes, and saves encoded tensors for LSTM training.
-
-2. Train the LSTM (note: training script may be integrated or require a separate `train.py`; adjust based on code review).
+```
+2. Train the LSTM
 
 ## Usage
 ### Inference (Text to Phonemes)
