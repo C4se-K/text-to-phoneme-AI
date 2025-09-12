@@ -1,4 +1,4 @@
-# Text-to-Phoneme AI
+# Text-to-Phoneme LSTM 
 
 A custom-trained LSTM-based AI model for converting English words into their ARPABET phoneme representations. This project uses a sequence-to-sequence approach to map graphemes (text characters) to phonemes, enabling applications like speech synthesis, pronunciation guides, and linguistic analysis.
 
