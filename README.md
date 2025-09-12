@@ -37,11 +37,11 @@ unzip American-English.zip
 ```
 
 ## Training
-1. Run the encoding script to prepare data:
+1. Train the LSTM
+run `training_encoding.py`. it outputs a trained model.
 ```markdown
 python training_encoding.py
 ```
-2. Train the LSTM
 
 ## Usage
 ### Inference (Text to Phonemes)
