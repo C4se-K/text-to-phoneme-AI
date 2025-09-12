@@ -40,10 +40,12 @@ python training_encoding.py
 
 ## Usage
 ### Inference (Text to Phonemes)
-Use `testing_decoding.py` for predictions:
-run `testing_decoding.py`.
+Use `testing_decoding.py` 
+for predictions:
+1. run `testing_decoding.py`.
 - loops until 'end' is typed.
 - prints out the Phoneme sequence of words typed.
+2. enter any word that you want to convert. 
 - expected output: Phoneme sequence like `HH AH0 L OW1`.
 - the script handles tokenization, LSTM forward pass, and decoding to ARPABET.
 
