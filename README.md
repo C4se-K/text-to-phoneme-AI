@@ -39,9 +39,11 @@ python training_encoding.py
 ## Usage
 ### Inference (Text to Phonemes)
 Use `testing_decoding.py` for predictions:
-python testing_decoding.py --input_word "hello" --model_path path/to/model.pth
-- Expected output: Phoneme sequence like `HH AH0 L OW1`.
-- The script handles tokenization, LSTM forward pass, and decoding to ARPABET.
+run `testing_decoding.py`.
+- loops until 'end' is typed.
+- prints out the Phoneme sequence of words typed.
+- expected output: Phoneme sequence like `HH AH0 L OW1`.
+- the script handles tokenization, LSTM forward pass, and decoding to ARPABET.
 
 ### Quick Test
 Run the basic test:
