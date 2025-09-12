@@ -28,9 +28,13 @@ pip install torch tokenizers
 ## Setup
 1. Clone the repository:
 git clone https://github.com/C4se-K/text-to-phoneme-AI.git
+```markdown
 cd text-to-phoneme-AI
+```
 2. Unzip the dataset:
+```markdown
 unzip American-English.zip
+```
 This should yield a file like `American-English.txt` or similar with word-to-phoneme mappings.
 
 ## Training
