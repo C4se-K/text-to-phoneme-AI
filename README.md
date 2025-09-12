@@ -15,6 +15,7 @@ A custom-trained LSTM-based AI model for converting English words into their ARP
 - transformers
 - `tokenizers`
 
+installation
 ```markdown
 pip install -r requirements.txt
 ```
@@ -31,7 +32,7 @@ unzip American-English.zip
 ```
 
 ## Training
-1. Train the LSTM
+Train the LSTM
 run `training_encoding.py`. it outputs a trained model.
 ```markdown
 python training_encoding.py
