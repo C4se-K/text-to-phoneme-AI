@@ -8,15 +8,6 @@ A custom-trained LSTM-based AI model for converting English words into their ARP
 - Includes tokenizer for efficient subword handling.
 - Supports inference on unseen words via learned patterns.
 
-## Project Structure
-| File/Directory | Description |
-| --- | --- |
-| `American-English.zip` | Dataset for training. contains word-phoneme pairs (From CMU-ARBABET Dictionary). |
-| `training_encoding.py` | Script for preprocessing and encoding training data into model-ready format. |
-| `testing_decoding.py` | Script for model inference, decoding predictions back to phonemes, and testing accuracy. |
-| `test3.py` | Quick test script, validats tokenizer and for basic model loading. |
-| `tokenizer_0.json` / `tokenizer_20231126_064040.json` | JSON files defining the trained tokenizer for text-to-token conversion. |
-
 ## Requirements
 - Python 3.8+
 - PyTorch==2.13.0 (no longer supported)
