@@ -8,18 +8,11 @@ A custom-trained LSTM-based AI model for converting English words into their ARP
 - Includes tokenizer for efficient subword handling.
 - Supports inference on unseen words via learned patterns.
 
-## Project Structure
-| File/Directory | Description |
-| --- | --- |
-| `American-English.zip` | Dataset for training. contains word-phoneme pairs (From CMU-ARBABET Dictionary). |
-| `training_encoding.py` | Script for preprocessing and encoding training data into model-ready format. |
-| `testing_decoding.py` | Script for model inference, decoding predictions back to phonemes, and testing accuracy. |
-| `test3.py` | Quick test script, validats tokenizer and for basic model loading. |
-| `tokenizer_0.json` / `tokenizer_20231126_064040.json` | JSON files defining the trained tokenizer for text-to-token conversion. |
-
 ## Requirements
 - Python 3.8+
-- PyTorch
+- PyTorch==2.13.0 (no longer supported)
+- keras==2.13.1 (depricated)
+- transformers
 - `tokenizers`
 - `zipfile`
 
@@ -46,9 +39,11 @@ python training_encoding.py
 ## Usage
 ### Inference (Text to Phonemes)
 Use `testing_decoding.py` for predictions:
-python testing_decoding.py --input_word "hello" --model_path path/to/model.pth
-- Expected output: Phoneme sequence like `HH AH0 L OW1`.
-- The script handles tokenization, LSTM forward pass, and decoding to ARPABET.
+run `testing_decoding.py`.
+- loops until 'end' is typed.
+- prints out the Phoneme sequence of words typed.
+- expected output: Phoneme sequence like `HH AH0 L OW1`.
+- the script handles tokenization, LSTM forward pass, and decoding to ARPABET.
 
 ### Quick Test
 Run the basic test:
