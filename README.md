@@ -19,9 +19,9 @@ A custom-trained LSTM-based AI model for converting English words into their ARP
 
 ## Requirements
 - Python 3.8+
-- PyTorch (for LSTM implementation)
-- `tokenizers` (for loading the provided tokenizer)
-- `zipfile` (standard library for dataset handling)
+- PyTorch
+- `tokenizers`
+- `zipfile`
 
 Install dependencies:
 pip install torch tokenizers
