@@ -15,7 +15,6 @@ FILE_NAME = "cmu_source.txt"
 #FILE_NAME = "cmudict-0.7bsymbols.txt"
 
 DIR_PATH = os.path.dirname(__file__)
-#print(DIR_PATH)
 
 #phonemes
 SYMBOLS = ['', 'AA', 'AA0', 'AA1', 'AA2', 'AE', 'AE0', 'AE1', 'AE2', 'AH', 'AH0', 'AH1', 

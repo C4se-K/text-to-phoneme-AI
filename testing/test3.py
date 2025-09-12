@@ -1,7 +1,5 @@
 import os
 
-
-
 DIR_NAME = os.path.join(os.path.dirname(__file__), 'American-English')
 SUB_DIR = ['Consonants', 'Conventions', 'Vowels']
 file_list = []
