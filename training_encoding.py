@@ -12,18 +12,15 @@ from keras.layers import LSTM, Dense, Embedding, Bidirectional, Dropout
 from keras.callbacks import EarlyStopping
 from keras.layers import AdditiveAttention
 import json
-
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from keras.models import load_model
 from keras.preprocessing.text import tokenizer_from_json
 
-
 from transformers import BertTokenizer
 
 FILE_NAME = "cmu_source.txt" # data source file name
 DIR_PATH = os.path.dirname(__file__)
-#print(DIR_PATH)
 
 #list of ARPABET phonemes that are used
 SYMBOLS = ['', 'AA', 'AA0', 'AA1', 'AA2', 'AE', 'AE0', 'AE1', 'AE2', 'AH', 'AH0', 'AH1', 
@@ -165,14 +162,12 @@ def get_tokenizer(name=""):
 start = time.time()
 words, phoneme_lists, count = read_file()
 print(f'there are {count} elements in the list')
-#calculate_statistics(phoneme_lists)
+print(f'statistics of the dataset: {calculate_statistics(phoneme_lists)}')
 print(f'operation took {time.time()-start} seconds')
-
 
 max_word_length = 20
 max_phoneme_length = max_word_length
 x_train, y_train, x_val, y_val = build_validation_set(words, phoneme_lists)
-
 
 model_id = ''
 word_tokenizer_name = 'bert-base-uncased'
@@ -182,6 +177,7 @@ word_sequences_padded, phoneme_sequences_padded, word_tokenizer, phoneme_tokeniz
                                                                                                      max_word_length, 
                                                                                                      max_phoneme_length, 
                                                                                                      word_tokenizer_name)
+
 test_words_sequences_padded, test_phone_sequences_padded, test_word_tokenizer, test_phoneme_tokenizer = preprocess_data(x_val, 
                                                                                                                         y_val, 
                                                                                                                         max_word_length, 
@@ -191,8 +187,6 @@ test_words_sequences_padded, test_phone_sequences_padded, test_word_tokenizer, t
 vocab_size = word_tokenizer.vocab_size
 phoneme_vocab_size = len(phoneme_tokenizer.word_index) + 1  # +1 for padding token
 
-
-
 start = time.time()
 model = get_model(model_id)
 print(f'operation took {time.time()-start} seconds')
@@ -200,8 +194,8 @@ print('training start...')
 start = time.time()
 
 attention = AdditiveAttention(name = 'attention_layer')
-# may or may not use
 early_stopping = EarlyStopping(monitor='val_loss', min_delta=0.001, patience=5, restore_best_weights=True)
+
 model.fit(word_sequences_padded, 
           phoneme_sequences_padded, 
           epochs=30, batch_size=32, 
@@ -211,4 +205,7 @@ model.fit(word_sequences_padded,
 print(f'operation took {time.time()-start} seconds')
 current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
 model_name = f'lstm_{current_time}.keras'
+
+#save the model
 model.save(model_name)
+
