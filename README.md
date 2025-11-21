@@ -9,7 +9,7 @@ A custom-trained LSTM-based AI model for converting English words into their ARP
 - Supports inference on unseen words via learned patterns.
 
 ## Requirements
-- Python 3.8+
+- Python 3.8
 - PyTorch==2.13.0 (no longer supported)
 - keras==2.13.1 (depricated)
 - transformers
